@@ -1,0 +1,233 @@
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 1 of 6
+SUBJECT: University E-mail Policy
+I. PURPOSE
+Electronic mail (e-mail) has become an essential service greatly enhancing communication both
+within the Southern Utah University community and to external users, including prospective
+students, alumni, and the public at large. The purpose of this policy is to describe the appropriate
+use of University e-mail accounts, associated responsibilities, and rights of all uses of the
+University e-mail system.
+II. REFERENCES
+A. Emergency Management Plan (EMP)
+B. Family Education Rights and Privacy Act of 1974 (FERPA); SUU Policy 11.3
+C. Government Records Access and Management Act (GRAMA), Title 63, Ch. 2, Utah
+Code Annotated 1953; SUU Policy 5.39
+D. SUU Policy 5.51: Information Technology Resources
+E. SUU Policy 5.53: University Archives and Records
+F. SUU Policy 5.54: Copyright
+G. SUU Policy 6.22: Faculty Due Process
+H. SUU Policy 8.3.5: Termination of Non-Academic Staff Employees and Disciplinary
+Actions
+I. SUU Policy 11.2: Student Responsibility and Rights
+J. Acknowledgement: University of Utah Electronic Messaging Policy
+III. DEFINITIONS
+A. Resources: Software, licensing, hardware, network, and staffing for support of the Email
+System.
+B. User: Any person, including faculty, staff, and students, who accesses and uses the Email
+System.
+C. The University: Southern Utah University.
+D. Chief Information Officer (CIO): The Associate Vice President for Information
+Technology.
+E. Delegated (Proxy) Access: The ability of a user to grant access to another user in
+order to schedule and/or e-mail on their behalf.
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 2 of 6
+SUBJECT: University E-mail Policy
+F. Functional Account: An e-mail account set up to facilitate communication for a
+particular University function, e.g., hostmaster@suu.edu, webservices@suu.edu, etc.
+G. Realtime Blackhole List (RBL): Lists of IP addresses of known sources of unsolicited
+commercial and bulk e-mail (a.k.a. SPAM).
+H. SUU E-mail System: Any system providing e-mail services to SUU faculty, staff,
+and/or students. This system may be managed and maintained by SUU, or be hosted
+by a third party vendor.
+I. SUU E-mail Account: An official SUU account on a SUU E-mail System.
+IV. APPLICABILITY
+This policy applies to all users of the University E-mail System.
+V. POLICY
+A. Access to E-mail: Email is made available to authorized users as a convenience for
+communication.
+1. The University provides SUU E-mail Accounts for legitimate university-related
+activities to SUU faculty and staff. The IT department has oversight over those
+accounts, with the ability to add/remove accounts.
+2. The University provides SUU E-mail Accounts on Google Mail (@suumail.net)
+to all students desiring such an account. These accounts are hosted by a 3rd party,
+and thus are subject to Google’s Terms and Conditions. It is intended that these
+accounts are available for as long as Google provides the service.
+3. The University provides SUU E-mail Accounts on Google Mail
+(@emeriti.suu.edu) to all emeriti faculty/staff desiring such an account.
+Arrangements should be made with the IT department as part of the retirement
+process. These accounts are hosted by a 3rd party, and thus are subject to
+Google’s Terms and Conditions. It is intended that these accounts are available
+for as long as Google provides the service.
+4. The University provides SUU E-mail Accounts on Google Mail (@bard.org) to
+all staff working for the Utah Shakespeare Festival. The Festival’s IT manager
+has oversight over those accounts, with the ability to add/remove accounts.
+B. Privacy & Security
+1. Users shall respect the legitimate expectations of privacy of others.
+2. The security and privacy of messages cannot be guaranteed. During the course of
+system maintenance on the SUU E-mail System, IT staff may inadvertently view
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 3 of 6
+SUBJECT: University E-mail Policy
+the contents of messages as they are processed through the SUU E-mail System.
+However, these staff members are expected to maintain the confidentiality of any
+data they encounter. Not doing so may subject IT administrators to disciplinary
+action.
+3. Users should not consider e-mail to be private or secure. Messages addressed to
+nonexistent or incorrect usernames may be delivered to unintended recipients.
+4. The security of messages sent outside the E-mail System (via the Internet or
+otherwise) cannot be guaranteed. Users agree not to send e-mail containing
+information considered to be sensitive.
+5. Users are responsible for safeguarding their passwords. Individual passwords
+should not be printed or given to others (including family members).
+6. A User may grant delegated (proxy) access to another user in the SUU E-mail
+System. Requests for delegated (proxy) access must be approved by the User
+whose account will be accessed.
+7. Users are advised that e-mail messages on the SUU E-mail System constitute
+“public records” and/or “student records” and SUU is authorized and may be
+obligated to disclose e-mail messages to law enforcement officials or others under
+the Government Records Access and Management Act (GRAMA) or the Family
+Education Rights and Privacy Act (FERPA) without prior notice.
+C. Monitoring
+1. The University reserves the right, but not the duty, to monitor any and all aspects
+of its SUU E-mail System. Southern Utah University will not monitor e-mail as a
+routine matter, but it may do so to the extent permitted by law or as the University
+deems necessary for purposes of maintaining the integrity and effective operation
+of the e-mail systems. However, there are cases where “responsive monitoring” is
+performed whereby the University monitors in response to a particular problem,
+complaint, or investigation to a claim or lawsuit. All monitoring will be approved
+by the appropriate oversight body.
+D. Mass E-mail
+1. Public Relations, Human Resources, and the President’s Office may send
+messages to the entire faculty, staff, administration, and/or student body.
+Additionally, designated members of the Critical Response Task Force may send
+mass messages in the case of a campus emergency.
+2. IT staff, with authorization from the CIO, may send bulk e-mail as needed to
+inform the campus community of computing-related issues.
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 4 of 6
+SUBJECT: University E-mail Policy
+3. Faculty members are permitted to send e-mail messages to groups of students
+currently enrolled in a course. E-mail content must be relevant to that course.
+4. Deans, Department Chairs, Academic Advisors and their appointed designees are
+permitted to send e-mail messages to large groups of students if those students are
+currently part of that person’s professional responsibilities and the e-mail content
+is relevant to those responsibilities.
+5. Alumni Relations may send e-mail messages to current and former SUU students.
+6. Enrollment Management may send e-mail messages pertaining to their mission of
+recruitment and retention.
+7. The Registrar’s Office may send e-mail messages to current students and
+graduates as needed to inform them of registration and graduation issues.
+8. The Office of the Vice President of Student Services and the Provost’s Office are
+permitted to send e-mail messages to groups of students, or the entire student
+body as needed.
+9. The Faculty Senate Executive Committee may send e-mail messages to groups of
+faculty or the entire faculty as needed.
+10. The Staff Association Officers may send e-mail messages to groups of staff
+members or the entire staff membership as needed.
+11. Additional entities may be granted permission to send e-mail messages to
+identified constituencies based on the approval from the appropriate
+administrative Vice President.
+12. Other individuals not listed above, wishing to message all or part of the student
+body, faculty, and/or staff, should use the mySUU portal messaging system.
+E. Abuses of E-mail
+1. The SUU E-mail System shall not be used for any activity that violates the SUU
+Information Technology Resources Policy (Policy #5.51).
+2. Although modest personal use of the SUU E-mail System is expected and
+permitted, its primary purpose is as a means of conducting official University
+business. Any use of the SUU E-mail System that interferes with University
+activities and/or functions or does not respect the image and reputation of the
+University is improper.
+3. The following are some specific actions and uses of the SUU E-mail System that
+are considered improper. This list is not intended to be all inclusive:
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 5 of 6
+SUBJECT: University E-mail Policy
+i. Concealment or misrepresentation of names or affiliations in e-mail
+messages.
+ii. Alteration of source or destination address of e-mail.
+iii. Use of e-mail for commercial or private business purposes that have not
+been approved.
+iv. Use of e-mail to harass or threaten individuals, including “cyber stalking.”
+v. Contain material which violates pornography laws.
+vi. Contain algorithms or software which, if transferred, violate Unites States
+export laws.
+vii. Contain scripts or code that could cause a security breach or permit use of
+resources in opposition to University policy.
+4. As described in SUU Policy 5.54, sharing of copyrighted material without
+permission may constitute infringement unless permitted by fair use or other
+federal laws.
+5. SPAM: Sending unwanted e-mail messages to a large population abuses the email
+system and results in fewer resources for University purposes. Sending email
+messages to more than 10 users, whether as a single message or as a series or
+related messages, is expressly prohibited by this policy, except for communication
+detailed in section D, Mass E-mail.
+F. E-mail System Management
+1. No User will be allowed more than one account in the E-mail System.
+2. Functional Accounts may help employees better organize and facilitate e-mail
+communication for a particular function. Functional accounts also provide the
+ability for multiple people to be able to proxy into that single account to help
+manage the function, without having to have multiple individuals proxy into each
+other’s mailboxes. Functional accounts may be created once the need is
+demonstrated.
+3. Due to an increased threat landscape on the Internet, certain attachments may be
+prevented from entering the SUU E-mail System. The IT department carefully
+considers the balance between security and convenience when determining which
+file types are blocked by any SUU E-mail System managed and maintained by the
+IT department. E-mail services provided by a third party vendor are subject to the
+vendor’s restrictions on attachment file types.
+Policy # 5.58
+SOUTHERN UTAH UNIVERSITY Date Approved: 01/13/12
+Policies and Procedures Date Amended:
+Reviewed w/no Changes:
+Office of Responsibility: CIO
+Page 6 of 6
+SUBJECT: University E-mail Policy
+4. In order to help reduce the amount of spam and malicious e-mail coming into any
+SUU E-mail System managed and maintained by the IT department, the IT
+department reserves the right to implement prevention strategies that may include,
+but are not limited to RBL’s, anti-virus scanners, and spam filters. E-mail
+services provided by a third party vendor are subject to the vendor’s efforts in
+controlling spam.
+G. Student Preferred E-mail Expectations: Students may prefer to use a personal e-mail
+account for their communication with the University. This is permitted with the
+following understandings:
+1. The student is expected to update/confirm their preferred e-mail address at least
+once per semester and/or as changes occur.
+2. The student is responsible for all communications sent by the University to their
+preferred e-mail address, as provided by the student, regardless of whether the
+message was received or opened by the student.
+H. E-mail Directory: An e-mail directory of University faculty, staff, and students is
+available on the SUU web page. Students who prefer that their directory information
+be kept private may request such through the Registrar’s Office.
+I. E-mail Retention and Disposal
+1. All e-mail coming into and sent from any SUU E-mail System managed and
+maintained by the IT department is archived and retained for a period of one year.
+E-mail older than one year is automatically purged from the archival system.
+2. E-mail services provided by a third party vendor are subject to the vendor’s
+retention and disposal policies.
+VI. SANCTIONS
+A. Members of the University community who violate this policy may be subject to
+disciplinary action as described in SUU policy 6.22, Faculty Due Process; SUU
+Policy 8.3.5, Termination of Non-Academic Staff Employees and Disciplinary
+Actions; and/or SUU Policy 11.2 Student Responsibility and Rights.

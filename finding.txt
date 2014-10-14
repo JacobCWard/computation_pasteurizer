@@ -1,0 +1,11 @@
+Ways of finding count for given word:
+1) Pass a String to a predicate that tests if it is == to "the".
+2) In the filter code every time it passes, increment a counter.
+Another method:
+For each individual word (2106) in our TreeSet, go over to awmt.txt and test every word to see if it equal.
+We can use our filter code to do this. Every time we see a match, we increment the counter.
+
+How much work is this:
+2106 words and for each word we need to compare it with ~ 8200 word. 17 million compares.
+
+If we use a TreeMap we only need to do ~ 8200 operations.

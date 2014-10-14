@@ -1,0 +1,65 @@
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 11 Ex. 3: Form the union of sets A and B.  How many elements in the set?</h1>
+  
+		<h2>Output:</h2>
+		<img src="11-03.png"></img>
+		<br>
+		<br>
+		
+		<!--This is where commentary would go-->
+		<p>SetB Contains 483 elements</p>
+		
+		<h2>Source Code:</h2>
+		<pre>
+package CSIS2420unit2;
+
+//Implementing Sets
+//Using hash tables: no order
+
+import java.util.*;
+import java.io.*;
+
+public class FindSetB {
+	public static void main (String[] args) throws IOException{
+		String [] wordArray = utilities.fileToStringArray("awmt.txt");
+		List<String> wordList = Arrays.asList(wordArray);
+		TreeSet<String> setB = new TreeSet<String>(wordList);
+
+		Iterator<String> it;
+
+		it = setB.iterator();
+		while (it.hasNext()){
+			if (!cond(it.next())){
+				it.remove();
+			}
+		}
+
+		for(String s:setB){
+			System.out.println(s);
+		}
+
+		System.out.println("SetB has "+setB.size()+" elements.");
+
+	}
+
+	public static boolean cond(String str){
+		if (str.charAt(0)=='c'||str.charAt(0)=='d'||str.charAt(0)=='e'||str.charAt(0)=='f'){
+			return true;
+		}
+		return false;
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

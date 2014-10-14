@@ -1,0 +1,37 @@
+html, body {
+  background: rgb(255,255,255);
+  font-family: Arial;
+  font-size: 14px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+h1 {
+  background: rgb(220,220,220);
+  padding: 10px;
+  padding-left: 20px;
+  margin-top: 0px;    
+}
+
+h2 {
+  padding: 15px;
+  word-wrap: break-word;
+  border: 2px solid rgb(220,220,220);
+}
+
+img {
+  padding: 15px;
+  background: rgb(220,220,220);
+  border: 1px solid rgb(50,50,50);
+  font-weight: bold;
+}
+
+iframe {
+  padding: 15px;
+  font-family: Arial;
+  font-size: 18px;
+  background: rgb(220,220,220);
+  border: 1px solid rgb(50,50,50);
+  font-weight: bold;
+}

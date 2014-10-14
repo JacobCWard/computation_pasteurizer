@@ -1,0 +1,176 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 3 Ex. 1: Add and test a method for the List class whcih returns the size of the list.</h1>
+  
+		<h2>Output:</h2>
+		<img src="03-01.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// List Class
+
+public class List {
+	private Node firstNode;
+	private Node lastNode;
+	private String name;
+	
+	public List () {
+		name = "default list";
+		firstNode = lastNode = null;
+	}
+		
+	public List (String s) {
+		name = s;
+		firstNode = lastNode = null;
+	}
+	
+	public void insertAtFront (Object insertItem){
+		if (isEmpty()) {
+			firstNode = lastNode = new Node(insertItem);
+		}
+		else {
+			firstNode = new Node(insertItem, firstNode);
+		}
+	}
+	
+	public Object removeFromFront (){
+		Object removeItem = null;
+		if (isEmpty()) {
+			removeItem = "This list is empty!";
+			return removeItem;
+		}
+		removeItem = firstNode.getObject();
+		if (firstNode.equals(lastNode)) {
+			firstNode = lastNode = null;
+		}
+		else {
+			firstNode = firstNode.getNext();
+		}
+		return removeItem;
+	}
+	
+	public void insertAtBack(Object insertItem){
+		if (isEmpty()) {
+			 lastNode = firstNode = new Node(insertItem);
+		}
+		else {
+			Node currentNode = new Node(insertItem);
+			lastNode.setNext(currentNode);
+			lastNode = currentNode;
+		}
+	}
+	
+	public Object removeFromBack(){
+		Object removeItem = null;
+		if (isEmpty()) {
+			removeItem = "This list is empty!";
+			return removeItem;
+		}
+		removeItem = lastNode.getObject();
+		if (lastNode.equals(firstNode)) {
+			lastNode = firstNode = null;
+		}
+		else {
+			Node currentNode = firstNode;
+			while(currentNode.getNext()!=lastNode){
+				currentNode = currentNode.getNext();
+			}
+			lastNode = currentNode;
+			lastNode.setNext(null);
+		}
+		return removeItem;
+	}
+
+	public int length(){
+		int length = 0;
+		if(isEmpty()){
+			return length;
+		}
+		else{
+			Node currentNode=firstNode;
+			while(currentNode!=null){
+				length++;
+				currentNode = currentNode.getNext();
+			}
+			return length;
+		}
+	}
+	
+	public String print () {
+		String result = "";
+		String newline = "\n";
+		if (isEmpty()) {
+			result += name + " is Empty" + newline;
+			return result;
+		}
+		result += name + " contains: " + newline;
+		Node current = firstNode;
+		while (current != null) {
+			result += current.getObject() + newline;
+			current = current.getNext();
+		}
+		
+		return result;
+	}
+	
+	public boolean isEmpty(){
+		return (firstNode == null);
+	}
+	
+
+}
+
+//Test Driver for length() method
+
+import java.math.*;
+
+public class ListTest{
+	public static void main (String[] args) {
+		
+		BigInteger bi = new BigInteger("110000777788449933");
+		String s = new String("Go Thunderbirds!");
+		Character ch = new Character('W');
+		int i = 1897;
+		
+		List lst = new List("Test List");
+		
+		lst.insertAtFront(bi);
+		lst.insertAtFront(s);
+		lst.insertAtFront(ch);
+		lst.insertAtFront(i);
+		
+		System.out.println(lst.print());
+		
+		System.out.println("There are "+lst.length()+" items in this list.\n");
+		
+		for(int j=lst.length(); j!=0; j--){
+			lst.removeFromFront();
+			System.out.println(lst.print());
+			System.out.println("There are "+lst.length()+" items in this list.\n");
+		}
+		
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

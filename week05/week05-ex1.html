@@ -1,0 +1,124 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 5 Ex. 1: Generate 1000 random ints in the range 0 to 1 million, print them in the order they are generated and insert them into the tree.  Then do an inOrderTraversal which prints out the keys.</h1>
+  
+		<h2>Output:</h2>
+		<img src="05-01A.png"></img>
+		<br>
+		<br>
+		
+		<p>The values printed out after inOrderTraversal are in order.</p>
+		<p>Running the inOrderTraversal algorithm on 1 million values in the range 0 - 1 billion takes approximately 43 milliseconds.</p>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// Test driver for the Tree class
+
+public class TreeTest {
+	public static void main (String[] args) {
+		int [] a = RandomGenerator.randomInts(1000,1000000);
+		Tree myTree = new Tree(a[0]);
+		
+		for (int i =1; i<=a.length-1; i++) {
+			System.out.println("inserting " + a[i]);
+			myTree.insertNode(myTree.root, a[i]);
+		}
+
+		System.out.println();
+		System.out.println("After inOrderTraversal");
+		myTree.inOrderTraversal(myTree.root);
+	}
+}
+		
+// Basic BST
+
+public class Tree {
+	public TreeNode root;
+	
+	public Tree (int key) {
+		root = new TreeNode(key);
+	}
+	
+	public void insertNode  (TreeNode t, int d) {
+		if (d < t.getKey()) {
+			if (t.getLeft() == null) {
+				t.setLeft(new TreeNode(d));
+			}
+			else {
+				insertNode(t.getLeft(),d);	//recursive call
+			}
+		}
+		else if (d > t.getKey()) {
+			if (t.getRight() == null) {
+				t.setRight(new TreeNode(d));
+			}
+			else {
+				insertNode(t.getRight(),d);
+			}
+		}
+	}
+	
+	//One of the most powerful algorithms you ever see
+	public void inOrderTraversal (TreeNode node) {
+		
+		if (node == null) {
+			return;
+		}
+		
+		inOrderTraversal(node.getLeft());
+		System.out.println(node.getKey()+" ");
+		inOrderTraversal(node.getRight());
+		
+	}
+
+
+}
+		
+//Random Number Generator
+import java.util.Random;
+
+public class RandomGenerator{
+
+	public static void main (String[] args) {
+		int quantity=10;
+		int range=100;
+		int [] a = randomInts(quantity, range);
+		String s = "Random Numbers Generated: ";
+		
+		for (int i=0;i&lt;a.length;i++) {
+			s+=a[i]+" ";
+		}
+		System.out.println(s);
+	}
+		
+	public static int[] randomInts(int quantity, int range){
+		Random r = new Random();
+		int[] a = new int[quantity];
+		
+		for (int i=0;i&lt;a.length;i++) {
+			a[i]=r.nextInt(range);
+		}
+		
+		return a;
+	}
+}
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

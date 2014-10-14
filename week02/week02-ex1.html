@@ -1,0 +1,84 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 2 Ex.1: Using the Node class, create 4 different nodes and place in them: Last name, First name, Major, Class. Link them so they go in that order. Then write code which print out the data, one piece of data per line, by starting at the first node and walking though the list.</h1>
+  
+		<h2>Output:</h2>
+		<img src="02-01.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+//Node Class		
+		
+public class Node {
+	private Object data;
+	private Node next; //Self-referential
+	
+	public Node (Object obj, Node nextNode) {
+		data = obj;
+		next = nextNode;
+	}
+	
+	public Node (Object obj) {
+		data = obj;
+		next = null;
+	}
+	
+	public void setObject (Object obj){
+		data = obj;
+	}
+	
+	public Object getObject() {
+		return data;
+	}
+	
+	public void setNext (Node nextNode){
+		next = nextNode;
+	}
+	
+	public Node getNext(){
+		return next;
+	}
+}
+
+//Create and Print Nodes
+
+import java.math.*;
+
+public class NodeTest2 {
+	public static void main(String[] args){
+		String[] information = ("Ward,Jacob,Information Systems,Sophomore").split(",");
+		
+		Node lName = new Node(information[0]);
+		Node fName = new Node(information[1]);
+		Node major = new Node(information[2]);
+		Node classYear = new Node(information[3]);
+		
+		System.out.println(lName.getObject());
+		System.out.println(fName.getObject());
+		System.out.println(major.getObject());
+		System.out.println(classYear.getObject());
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 2 Ex. 5: Create a list and fill it with the squares from 1 to 100, then print out the contents.</h1>
+  
+		<h2>Output:</h2>
+		<img src="02-05.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+//List Test Driver - Squares 1-100
+
+import java.math.*;
+
+public class SquaresList{
+	public static void main (String[] args) {
+		List squares = new List("Squares");
+		
+		for(int i=1;i<=100;i++){
+			squares.insertAtBack((int)Math.pow(i,2));
+		}
+		
+		System.out.println(squares.print());
+	}
+}
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Ex. 6: Have the last node of the List in ex. 3 point to the first node.  What happens when you try to print the list?  </h1>
+  
+		<h2>Output:</h2>
+		<img src="02-06.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+Test Driver:
+import java.math.*;
+
+public class ListTestEx6{
+	public static void main (String[] args) {
+		
+		BigInteger bi = new BigInteger("110000777788449933");
+		String s = new String("Go Thunderbirds!");
+		Character ch = new Character('W');
+		int i = 1897;
+		
+		List lst = new List();
+		
+		lst.insertAtFront(bi);
+		lst.insertAtFront(s);
+		lst.insertAtFront(ch);
+		lst.insertAtFront(i);
+		
+		Node n = lst.getLastNode();
+		n.setNext(lst.getFirstNode());
+		lst.setLastNode(n);
+		
+		System.out.println(lst.print());
+	}
+}
+
+Modified Print Method:
+public String print () {
+		String result = "";
+		String newline = "\n";
+		int counter = 0;
+		int stop = 2;
+		if (isEmpty()) {
+			result += name + " is Empty" + newline;
+			return result;
+		}
+		result += name + " contains: " + newline;
+		Node current = firstNode;
+		while ((current != null)&&(counter&#62;stop)) {
+			result += current.getObject() + newline;
+			if(current.equals(lastNode)){
+				counter++;
+				if(counter==stop){
+					result += "Error: Infinite Loop";
+				}
+			}
+			current = current.getNext();
+			
+		}
+		
+		return result;
+	}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

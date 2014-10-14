@@ -1,0 +1,145 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 3 Ex. 9: Generate 10 random ints in the range 0 to 100, 
+  print them in the order they are generated and insert them into
+  a tree constructed using just the TreeNode class. Print out the keys 
+  in such a way that it proves that the data was inserted in the way you expect.</h1>
+  
+		<h2>Output:</h2>
+		<img src="03-09A.png"></img>
+		<img src="03-09B.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+		
+// Test driver for TreeNode
+
+import java.math.*;
+
+public class TreeNodeTest9{
+	public static void main (String[] args) {
+		int [] a = {29,48,67,94,98,52,86,0,25,27};
+		//           0  1  2  3  4  5  6 7  8  9 
+		TreeNode [] tn= new TreeNode[a.length];
+		String s = "keys are: ";
+		
+		for(int i=0;i&lt;a.length;i++){
+			tn[i] = new TreeNode(a[i]);
+			s+=a[i]+" ";
+		}
+		System.out.println(s);
+		
+		//29
+		tn[0].setRight(tn[1]); //48>29
+		tn[1].setRight(tn[2]); //67>48
+		tn[2].setRight(tn[3]); //94>67
+		tn[3].setRight(tn[4]); //98>94
+		tn[2].setLeft(tn[5]);  //48<52<67
+		tn[3].setLeft(tn[6]);  //67<86<94
+		tn[0].setLeft(tn[7]);  //0<29
+		tn[7].setRight(tn[8]); //25>0
+		tn[8].setRight(tn[9]); //27>25
+		
+		System.out.print("traversed/sorted tree: ");
+		inOrderTraversal(tn[0]);
+	}
+	
+	public static void inOrderTraversal (TreeNode node) {
+		if (node == null) {
+			return;
+		}
+		
+		inOrderTraversal(node.getLeft());
+		System.out.print(node.getKey()+" ");
+		inOrderTraversal(node.getRight());
+		
+	}
+}
+		
+// Basic Binary Search Tree Node
+
+public class TreeNode {
+	private int key;
+	private TreeNode left;
+	private TreeNode right;
+	
+	public TreeNode(int n) {
+		key = n;
+		left = right = null;
+	}
+	
+	public TreeNode (int n, TreeNode leftNode, TreeNode rightNode) {
+		key=n;
+		left=leftNode;
+		right=rightNode;
+	}
+	
+	public int getKey() {
+		return key;
+	}
+	
+	public void setKey (int n) {
+		key = n;
+	}
+	
+	public TreeNode getLeft (){
+		return left;
+	}
+	
+	public void setLeft (TreeNode leftNode) {
+		left = leftNode;
+	}
+	
+	public TreeNode getRight (){
+		return right;
+	}
+	
+	public void setRight (TreeNode rightNode) {
+		right = rightNode;
+	}
+	// Be aware that you need to add checking code if you use this in aT
+}
+
+//Random Number Generator
+import java.util.Random;
+
+public class RandomGenerator{
+
+	public static void main (String[] args) {
+		int quantity=10;
+		int range=100;
+	
+		Random r = new Random();
+		int[] a = new int[quantity];
+		String s = "Random Numbers Generated: ";
+		
+		for (int i:a) {
+			a[i]=r.nextInt(range);
+			s+=a[i]+" ";
+		}
+		System.out.println(s);
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

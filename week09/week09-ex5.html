@@ -1,0 +1,58 @@
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 9 Ex. 5: Write a filter that selects the words starting with 'a' or 'b'.  How big is it?.</h1>
+  
+		<h2>Output:</h2>
+		<img src="09-05.png"></img>
+		<br>
+		<br>
+		
+		<!--This is where commentary would go-->
+		<p>There are 1318 words in this file</p>
+		
+		<h2>Source Code:</h2>
+		<pre>
+package CSIS2420unit2;
+
+import java.io.*;
+import java.util.*;
+
+public class Filter_AB {
+	public static void main (String[] args) throws IOException{
+		String [] wordArray= utilities.fileToStringArray("awmt.txt");
+		List<String> wordList = Arrays.asList(wordArray);
+		ArrayList<String> al = new ArrayList<String>(wordList);
+		
+		Iterator<String> it = al.iterator();
+		
+		while(it.hasNext()){
+			if(!cond(it.next())){
+				it.remove();
+			}
+		}
+		
+		for(String s:al){
+			System.out.println(s);
+		}
+		System.out.println("al now has this many elements: "+al.size());
+	}
+	
+	public static boolean cond (String str){
+		str.toLowerCase();
+		return (str.charAt(0)=='a')||(str.charAt(0)=='b');
+	}
+}
+
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 3 Ex. 4: Write code that pushes 10 strings onto the stack (version 2), printing while it goes, then pops them off, printing while it removes.</h1>
+  
+		<h2>Output:</h2>
+		<img src="03-04.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+public class Stack2{
+	private List s;
+
+	public Stack2() {
+		s = new List("The Stack");
+	}
+	
+	public void push (Object obj) {
+		s.insertAtFront(obj);
+	}
+	
+	public Object pop () {
+		return s.removeFromFront();
+	}
+	
+	public boolean isEmpty() {
+		return s.isEmpty();
+	}
+	
+	public String print () {
+		return s.print();
+	}
+}
+
+//Test Driver for the Stack 2 class
+
+import java.math.*;
+
+public class Stack2Test{
+	public static void main (String[] args) {
+		String [] fight = new String[10];
+		fight[0] = "We will cheer for the red and white of our fighting SUU";
+		fight[1] = "Hear our battle cry echo through the sky";
+		fight[2] = "As our team comes racing through";
+		fight[3] = "They will fight, fight, fight, 'til they hear us shout";
+		fight[4] = "And we sing our victory song";
+		fight[5] = "We will run, we will score";
+		fight[6] = "'Til the thunder roars, and the T-birds win once more";
+		fight[7] = "Go, Go, Go";
+		fight[8] = "Fight, Fight, Fight";
+		fight[9] = "WIN T-BIRDS!!!";
+		
+		
+		Stack2 objStack = new Stack2();
+		
+		for(int i=9; i>-1; i--){
+			objStack.push(fight[i]);
+			System.out.println(objStack.print());
+		}
+		
+		while(!objStack.isEmpty()){
+			objStack.pop();
+			System.out.println(objStack.print());
+		}
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

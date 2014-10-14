@@ -1,0 +1,62 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 2 Ex.3: Write a test driver for your new List class. Add four objects: BigInteger, String, Character, Integer, and print the contents. Remove the objects from the front one at a time and print the contents at each step.</h1>
+		<h2>Output:</h2>
+		<img src="02-03.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+//List class test driver
+
+import java.math.*;
+
+public class ListTest{
+	public static void main (String[] args) {
+		
+		BigInteger bi = new BigInteger("110000777788449933");
+		String s = new String("Go Thunderbirds!");
+		Character ch = new Character('W');
+		int i = 1897;
+		
+		List lst = new List();
+		
+		lst.insertAtFront(bi);
+		lst.insertAtFront(s);
+		lst.insertAtFront(ch);
+		lst.insertAtFront(i);
+		
+		System.out.println(lst.print());
+		
+		lst.removeFromFront();
+		System.out.println(lst.print());
+		lst.removeFromFront();
+		System.out.println(lst.print());
+		lst.removeFromFront();
+		System.out.println(lst.print());
+		lst.removeFromFront();
+		System.out.println(lst.print());
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

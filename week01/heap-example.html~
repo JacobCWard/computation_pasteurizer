@@ -1,0 +1,19 @@
+<!--
+  Example of how to post your non-programming assignments.
+  Notice that there are two sections:
+  1. Title of problem
+  2. Scanned image of your hand written solution.  If you prefer to type your solution directly into html, 
+		or scan a type written file, that is also acceptable.
+-->
+
+<html>  
+  <head>  
+    <title>John Doe's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Ex. 1: Example of how to present a non-programming assignment</h1>
+	<img src="./homework.png"></img>
+	</body>
+</html>

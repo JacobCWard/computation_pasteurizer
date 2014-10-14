@@ -1,0 +1,53 @@
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 6 Ex. 1: Generate 15 random ints in the range 0 to 100.
+   Demonstrate by hand the insertion of these numbers into a hash array of size 31.
+   Use the mod 31 hash.  Resolve the collisions by chaining.</h1>
+  
+		<h2>Output:</h2>
+		<img src="06-01-Random.png"></img><br/>
+		<img src="06-01-arrangement.png"></img><br>
+		<br>
+		<br>
+		
+		<!--This is where commentary would go-->
+		
+		<h2>Source Code:</h2>
+		<pre>
+public class myHashTable3 {
+	public static void main (String [] args){
+		int [] a = {5,30,51,66,96,77,42,38,36,35,95,42,35,68,98};
+		List[] hashTable = new List[31];
+
+		for(int i=0;i&lt;hashTable.length;i++){
+			hashTable[i] = new List(&quot;index &quot;+i);
+		}
+
+		hashTable[a[0]%31].insertAtFront(a[0]);
+		hashTable[a[1]%31].insertAtFront(a[1]);
+		hashTable[a[2]%31].insertAtFront(a[2]);
+		hashTable[a[3]%31].insertAtFront(a[3]);
+		hashTable[a[4]%31].insertAtFront(a[4]);
+		hashTable[a[5]%31].insertAtFront(a[5]);
+		hashTable[a[6]%31].insertAtFront(a[6]);
+		hashTable[a[7]%31].insertAtFront(a[7]);
+		hashTable[a[8]%31].insertAtFront(a[8]);
+		hashTable[a[9]%31].insertAtFront(a[9]);
+
+		for(int i=0;i&lt;31;i++){
+			System.out.println(hashTable[i].print());
+		}
+
+	}
+}</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

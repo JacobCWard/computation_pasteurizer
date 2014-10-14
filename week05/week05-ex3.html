@@ -1,0 +1,154 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 5 Ex. 3: Add a find(key) method to the Tree class which returns true if the key is in the Tree and false if key is not in the tree.</h1>
+  
+		<h2>Output:</h2>
+		<img src="05-03.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// Test driver for the Tree class
+
+public class TreeTest3 {
+	public static void main (String[] args) {
+		boolean b=false;
+		
+		while(b==false){
+			int [] a = RandomGenerator.randomInts(10,20,true);
+			Tree myTree = new Tree(a[0]);
+			
+			for (int i =1; i&lt;=a.length-1; i++) {
+				myTree.insertNode(myTree.root, a[i]);
+			}
+			
+			b=myTree.find(5,myTree.root);
+			System.out.println("Does the Tree contain 5? " + b + "\n");
+		
+		}
+	}
+}
+		
+// Basic BST
+
+public class Tree {
+	public TreeNode root;
+	
+	public Tree (int key) {
+		root = new TreeNode(key);
+	}
+	
+	public void insertNode  (TreeNode t, int d) {
+		if (d &lt; t.getKey()) {
+			if (t.getLeft() == null) {
+				t.setLeft(new TreeNode(d));
+			}
+			else {
+				insertNode(t.getLeft(),d);	//recursive call
+			}
+		}
+		else if (d > t.getKey()) {
+			if (t.getRight() == null) {
+				t.setRight(new TreeNode(d));
+			}
+			else {
+				insertNode(t.getRight(),d);
+			}
+		}
+	}
+	
+	public boolean find(int key, TreeNode t){
+		if(t == null){
+			return false;
+		}
+		else if(key > t.getKey()){
+			return find(key,t.getRight());
+		}
+		else if(key &lt; t.getKey()){
+			return find(key,t.getLeft());
+		}
+		else if(key == t.getKey()){
+			return true;
+		}
+		return false;
+	}
+	
+	public TreeNode min(TreeNode node){
+		if (node.getLeft() == null){
+			return node;
+		}
+		return min(node.getLeft());
+	}
+	
+	public int minValue(TreeNode t){
+		return min(t).getKey();
+	}
+	
+	public TreeNode max(TreeNode node){
+		if (node.getRight() == null){
+			return node;
+		}
+		return max(node.getRight());
+	}
+	
+	public int maxValue(TreeNode t){
+		return max(t).getKey();
+	}
+	
+	public void inOrderTraversal (TreeNode node) {
+		
+		if (node == null) {
+			return;
+		}
+		
+		inOrderTraversal(node.getLeft());
+		System.out.println(node.getKey()+" ");
+		inOrderTraversal(node.getRight());	
+	}
+}
+		
+//Random Number Generator
+import java.util.Random;
+
+public class RandomGenerator{
+
+	public static int[] randomInts(int quantity, int range, boolean print){
+		Random r = new Random();
+		int[] a = new int[quantity];
+		
+		for (int i=0;i&lt;a.length;i++) {
+			a[i]=r.nextInt(range);
+		}
+		if(print==true){
+			String s = "Random Numbers Generated: ";
+		
+			for (int i=0;i&lt;a.length;i++) {
+				s+=a[i]+" ";
+			}
+			System.out.println(s);
+		}
+		
+		return a;
+	}
+}
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

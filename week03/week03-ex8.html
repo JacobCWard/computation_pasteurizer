@@ -1,0 +1,98 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Finish our test driver for the TreeNode.  Print all contents using only reference to the root.</h1>
+  
+		<h2>Output:</h2>
+		<img src="03-08.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// Basic Binary Search Tree Node
+
+public class TreeNode {
+	private int key;
+	private TreeNode left;
+	private TreeNode right;
+	
+	public TreeNode(int n) {
+		key = n;
+		left = right = null;
+	}
+	
+	public TreeNode (int n, TreeNode leftNode, TreeNode rightNode) {
+		key=n;
+		left=leftNode;
+		right=rightNode;
+	}
+	
+	public int getKey() {
+		return key;
+	}
+	
+	public void setKey (int n) {
+		key = n;
+	}
+	
+	public TreeNode getLeft (){
+		return left;
+	}
+	
+	public void setLeft (TreeNode leftNode) {
+		left = leftNode;
+	}
+	
+	public TreeNode getRight (){
+		return right;
+	}
+	
+	public void setRight (TreeNode rightNode) {
+		right = rightNode;
+	}
+	// Be aware that you need to add checking code if you use this in aT
+}
+	
+// Test driver for TreeNode
+
+import java.math.*;
+
+public class TreeNodeTest{
+	public static void main (String[] args) {
+		int num1 = 1000;
+		int num2 = 2000;
+		int num3 = 3000;
+		
+		TreeNode child1 = new TreeNode(num1);
+		TreeNode child2 = new TreeNode(num2);
+		TreeNode root = new TreeNode(num3);
+		
+		root.setLeft(child1);
+		root.setRight(child2);
+		
+		System.out.println(root.getKey());
+		System.out.println(root.getLeft().getKey());
+		System.out.println(root.getRight().getKey());
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

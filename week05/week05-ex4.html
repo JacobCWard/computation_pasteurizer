@@ -1,0 +1,98 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 5 Ex. 4: Reimplement TreeNode and TreeNodeTest to store strings.  Use it to store the first 20 words in the "About SUU" web page.  Then print the contents of the tree.</h1>
+  
+		<h2>Output:</h2>
+		<img src="05-04.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// Basic BST
+
+public class TreeS {
+	public TreeNodeS root;
+	
+	public TreeS (String key) {
+		root = new TreeNodeS(key);
+	}
+	
+	public void insertNode  (TreeNodeS t, String d) {
+		if (d.compareTo(t.getKey()) < 0) {
+			if (t.getLeft() == null) {
+				t.setLeft(new TreeNodeS(d));
+			}
+			else {
+				insertNode(t.getLeft(),d);	//recursive call
+			}
+		}
+		else if (d.compareTo(t.getKey()) > 0) {
+			if (t.getRight() == null) {
+				t.setRight(new TreeNodeS(d));
+			}
+			else {
+				insertNode(t.getRight(),d);
+			}
+		}
+	}
+	
+	//One of the most powerful algorithms you ever see
+	public void inOrderTraversal (TreeNodeS node) {
+		if (node == null) {
+			return;
+		}
+		
+		inOrderTraversal(node.getLeft());
+		System.out.println(node.getKey()+" ");
+		inOrderTraversal(node.getRight());
+		
+	}
+}
+
+// Test driver for the Tree class
+
+public class TreeSTest {
+	public static void main (String[] args) {
+		String [] a = {"From","its","founding","in","1897,","Southern","Utah","University",
+		"has","evolved","from","a","teacher","training","institution","to","now","becoming",
+		"Utah's","designated"};
+		
+		TreeS myTree = new TreeS(a[0]);
+		
+		System.out.println("The root node is \""+a[0]+"\"");
+		
+		for (int i =1; i&lt;=a.length-1; i++) {
+			System.out.println("inserting \"" + a[i]+"\"");
+			myTree.insertNode(myTree.root, a[i]);
+		}
+
+		System.out.println();
+		System.out.println("After inOrderTraversal");
+		
+		long startTime = System.currentTimeMillis();
+		myTree.inOrderTraversal(myTree.root);
+		long endTime = System.currentTimeMillis();
+		System.out.println("That took " + (endTime - startTime) + " milliseconds");
+	}
+}
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 12 Ex. 3: Do what you need to do to improve the output.</h1>
+  
+		<h2>Output:</h2>
+		<img src="12-3.png"></img>
+		<br>
+		<br>
+		
+		<!--This is where commentary would go-->
+		
+		<h2>Source Code:</h2>
+		<pre>
+package CSIS2420unit2;
+
+public class OrderedPair implements Comparable<OrderedPair>{
+
+	public String key;
+	public Integer value;
+	
+	public OrderedPair(String word, Integer freq){
+		key = word;
+		value = freq;
+	}
+	
+	public boolean equals(Object o){
+		if(!(o instanceof OrderedPair)){
+			return false;
+		}
+		OrderedPair op = (OrderedPair) o;
+		return op.value.equals(this.value);		
+	}
+	
+	public int hashCode(){
+		return value;
+	}
+	
+	
+	public String toString() {
+		return "[\t" + key + "............" + value + "\t]\n";
+	}
+
+	public int compareTo(OrderedPair op) {
+		return ( op.value - this.value);
+	}
+
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

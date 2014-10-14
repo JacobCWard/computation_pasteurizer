@@ -1,0 +1,64 @@
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 6 Ex. 2: Using the hash table code given in class as a starting point, generate 100 random ints in the range 0 to 1 million and insert these into an appropriately sized hash table.  Then walk through the table printing all values inserted at each index.</h1>
+  
+		<h2>Output:</h2>
+		<img src="06-02.png"></img>
+		<br>
+		<br>
+		
+		<!--This is where commentary would go-->
+		
+		<h2>Source Code:</h2>
+		<pre>
+// Very simple Hash Table
+// Resolve collision by chaining
+
+public class myHashTable2 {
+	public static void main (String [] args){
+		int[] a = RandomGenerator.randomInts(100,1000000);
+		List[] hashTable = new List[199];
+		int key;
+		int value;
+		
+		//Always initialize object arrays
+		for(int i=0; i&lt;hashTable.length; i++){
+			hashTable[i] = new List("index "+i);
+		}
+		
+		for(int i=0; i&lt;a.length; i++){
+			value = a[i];
+			key = value % hashTable.length; //Hash function
+			hashTable[key].insertAtFront(value);
+		}
+		
+		for(int i=0; i&lt;hashTable.length; i++){
+			System.out.println(hashTable[i].print());
+		}
+	}
+}
+
+public class RandomGenerator{
+		
+	public static int[] randomInts(int quantity, int range){
+		Random r = new Random();
+		int[] a = new int[quantity];
+		
+		for (int i=0;i&lt;a.length;i++) {
+			a[i]=r.nextInt(range);
+		}
+		
+		return a;
+	}
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

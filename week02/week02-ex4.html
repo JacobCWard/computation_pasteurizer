@@ -1,0 +1,157 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 2 Ex.4: Add the following methods to the List code developed in class: insertAtBack() and removeFromBack(), which insert and remove objects from the back of the list. Run a test driver for these new methods using a List with the four elements in ex. 1. Show both the list code and the test driver code on your web page.</h1>
+  
+		<h2>Output:</h2>
+		<img src="02-04.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+// List Class
+
+public class List {
+	private Node firstNode;
+	private Node lastNode;
+	private String name;
+	
+	public List () {
+		name = "default list";
+		firstNode = lastNode = null;
+	}
+		
+	public List (String s) {
+		name = s;
+		firstNode = lastNode = null;
+	}
+	
+	public void insertAtFront (Object insertItem){
+		if (isEmpty()) {
+			firstNode = lastNode = new Node(insertItem);
+		}
+		else {
+			firstNode = new Node(insertItem, firstNode);
+		}
+	}
+	
+	public Object removeFromFront (){
+		Object removeItem = null;
+		if (isEmpty()) {
+			removeItem = "This list is empty!";
+			return removeItem;
+		}
+		removeItem = firstNode.getObject();
+		if (firstNode.equals(lastNode)) {
+			firstNode = lastNode = null;
+		}
+		else {
+			firstNode = firstNode.getNext();
+		}
+		return removeItem;
+	}
+	
+	public void insertAtBack(Object insertItem){
+		if (isEmpty()) {
+			 lastNode = firstNode = new Node(insertItem);
+		}
+		else {
+			Node currentNode = new Node(insertItem);
+			lastNode.setNext(currentNode);
+			lastNode = currentNode;
+		}
+	}
+	
+	public Object removeFromBack(){
+		Object removeItem = null;
+		if (isEmpty()) {
+			removeItem = "This list is empty!";
+			return removeItem;
+		}
+		removeItem = lastNode.getObject();
+		if (lastNode.equals(firstNode)) {
+			lastNode = firstNode = null;
+		}
+		else {
+			Node currentNode = firstNode;
+			while(currentNode.getNext()!=lastNode){
+				currentNode = currentNode.getNext();
+			}
+			lastNode = currentNode;
+			lastNode.setNext(null);
+		}
+		return removeItem;
+	}
+
+	public String print () {
+		String result = "";
+		String newline = "\n";
+		if (isEmpty()) {
+			result += name + " is Empty" + newline;
+			return result;
+		}
+		result += name + " contains: " + newline;
+		Node current = firstNode;
+		while (current != null) {
+			result += current.getObject() + newline;
+			current = current.getNext();
+		}
+		
+		return result;
+	}
+	
+	public boolean isEmpty(){
+		return (firstNode == null);
+	}
+	
+
+}		
+		
+// Test Driver for List class
+
+import java.math.*;
+
+public class ListTestBack{
+	public static void main (String[] args) {
+		String[] info = ("Ward,Jacob,Information Systems,Sophomore").split(",");
+		
+		List lst = new List();
+		
+		lst.insertAtBack(info[0]);
+		lst.insertAtBack(info[1]);
+		lst.insertAtBack(info[2]);
+		lst.insertAtBack(info[3]);
+		
+		System.out.println(lst.print());
+		
+		lst.removeFromBack();
+		System.out.println(lst.print());
+		lst.removeFromBack();
+		System.out.println(lst.print());
+		lst.removeFromBack();
+		System.out.println(lst.print());
+		lst.removeFromBack();
+		System.out.println(lst.print());
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>

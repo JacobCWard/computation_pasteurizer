@@ -1,0 +1,82 @@
+<!--
+  Example of how to post your programming code.
+  Notice that there are three sections:
+  1. Title of programming problem
+  2. Output of running code
+  3. Program listing
+-->
+
+<html>  
+  <head>  
+    <title>Jacob Ward's CSIS 2420 Homework</title> 
+    <link rel="stylesheet" href="../style.css"/>
+  </head>  
+  
+  <body>  
+  <h1>Week 3 Ex. 5: Rewrite the Stack2 class using composition, and write an appropriate test driver.  Then remove the print method and replace it with a "peek()" method that only returns the object at the top of the stack without removing it.  Post the code for the final class which models the stack ADT.</h1>
+  
+		<h2>Output:</h2>
+		<img src="03-05.png"></img>
+		<br>
+		<br>
+		
+		<h2>Source Code:</h2>
+		<pre>
+		
+public class Stack2{
+	private List s;
+
+	public Stack2() {
+		s = new List("The Stack");
+	}
+	
+	public void push (Object obj) {
+		s.insertAtFront(obj);
+	}
+	
+	public Object pop () {
+		return s.removeFromFront();
+	}
+	
+	public boolean isEmpty() {
+		return s.isEmpty();
+	}
+	
+	public Object peek() {
+		if(isEmpty()){
+			return null;
+		}
+		return s.getFirstNode().getObject();
+	}
+}
+
+//Test Driver for the Stack 2 class
+
+import java.math.*;
+
+public class Stack2Test5{
+	public static void main (String[] args) {
+		String s1="This is a test of the Stack class";
+		int i=87;
+		Character ch='$';
+		BigInteger bi= new BigInteger("167895431424573821");
+		
+		Stack2 objStack = new Stack2();
+		
+		objStack.push(s1);
+		objStack.push(i);
+		objStack.push(ch);
+		objStack.push(bi);
+		
+		System.out.println(objStack.peek());
+		
+	}
+}
+
+		</pre>
+		<br>
+		<br>
+		<br>
+		
+</body>
+</html>
